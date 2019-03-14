@@ -37,7 +37,7 @@
             <div class="fib">
                 <form class="form-inline " action="" method="post">
                     {% csrf_token %}
-                    <input type="number" class="form-control mb-1 mr-sm-1" id="fibnum" placeholder="Enter Nth Fibonacci Number" name="finnumber" style="width: 300px;">
+                    <input type="number" class="form-control mb-1 mr-sm-1" id="fibnum" placeholder="Enter Nth Fibonacci Number" name="finnumber" style="width: 300px;" min="1">
 
                     <button type="submit" class="btn btn-primary mb-2">Submit</button>
                 </form>
