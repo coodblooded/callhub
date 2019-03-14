@@ -1,0 +1,71 @@
+body{
+  background: linear-gradient(to bottom, #393e46, rgb(62, 66, 66));
+  background-attachment: fixed;
+}
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+main{
+  padding: 10px;
+  background-color: white;
+  width: 100%;
+  min-height: 300px;
+}
+header{
+  background-color: #ffffff;
+  width: 1184px;
+  margin: 0 auto;
+}
+ ul{
+   margin: 3px;
+   display: flex;
+ }
+ .nav-item{
+   display: inline-block;
+   padding: 5px 10px;
+   font-size: 22px;
+   border-right: 1px solid #bbb;
+ }
+ .logo{
+   vertical-align: middle;
+   height: 40px;
+   background: gray;
+ }
+ .container{
+   display: flex;
+   margin: 60px auto 0 auto;
+   justify-content: center;
+ }
+
+.fib {
+   position: fixed;
+    margin: 15% 30% 0 30%;
+
+ }
+
+.result{
+    font-size: 18px;
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 800px;
+    cursor: pointer;
+
+}
+
+#result-span{
+
+}
+
+.git-link{
+    text-decoration: none;
+    font-size: 34px;
+    margin-top: 100px;
+    color: blue;
+}
+
+a:hover{
+    text-decoration: none;
+}

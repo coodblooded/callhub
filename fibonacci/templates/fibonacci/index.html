@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CallHub Assignment </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+      <nav>
+        <ul>
+          <li class="nav-item">
+            <router-link to="/">
+            <img class="logo" src="{% static 'img/callhub-logo.png' %}"/>
+            </router-link>
+          </li>
+
+
+        </ul>
+      </nav>
+          <div class="container">
+      <main>
+      <div style="height: 20px;">
+         {% if result %}
+             <center>
+             <div class="card">
+            <p class="card-header result" data-toggle="tooltip" title="{{ result }}">{{ per }}<sup>th</sup>
+                fibonacci number is : <span id="result-span" > {{ result }}</span></p>
+            <p class="result" data-toggle="tooltip" title="Time to calculate Nth fibonacci number"> Time : {{ time }} <span>seconds</span></p>
+           </div>
+             </center>
+        {% endif %}
+      </div>
+      <div>
+            <div class="fib">
+                <form class="form-inline " action="" method="post">
+                    {% csrf_token %}
+                    <input type="number" class="form-control mb-1 mr-sm-1" id="fibnum" placeholder="Enter Nth Fibonacci Number" name="finnumber" style="width: 300px;">
+
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </form>
+            </div>
+          </div>
+      </main>
+
+    </div>
+      <center>
+           <a href="https://github.com/coodblooded/callhub" target="_blank" class="git-link"><i class="fa fa-github"></i></a>
+      </center>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
